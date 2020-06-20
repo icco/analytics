@@ -12,7 +12,7 @@ COPY ./start.sh /go/bin/
 
 RUN apk add --no-cache git gcc ca-certificates g++ build-base bash
 
-RUN git clone --no-hardlinks -b release-1.3 https://github.com/zgoat/goatcounter.git .
+RUN git clone --no-hardlinks https://github.com/zgoat/goatcounter.git .
 RUN go build \
     -tags osusergo,netgo,sqlite_omit_load_extension \
     -ldflags='-extldflags=-static' \
