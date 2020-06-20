@@ -10,7 +10,7 @@ WORKDIR /go/src/zgo.at/goatcounter/
 
 COPY ./start.sh /go/bin/
 
-RUN apk add --no-cache git gcc ca-certificates g++ build-base
+RUN apk add --no-cache git gcc ca-certificates g++ build-base bash
 
 RUN git clone --no-hardlinks -b release-1.3 https://github.com/zgoat/goatcounter.git .
 RUN go build \
